@@ -1,0 +1,1016 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "MRData": {
+      "type": "object",
+      "properties": {
+        "xmlns": {
+          "type": "string"
+        },
+        "series": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "string"
+        },
+        "offset": {
+          "type": "string"
+        },
+        "total": {
+          "type": "string"
+        },
+        "DriverTable": {
+          "type": "object",
+          "properties": {
+            "Drivers": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "permanentNumber": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "permanentNumber",
+                    "code",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "code",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "permanentNumber": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "permanentNumber",
+                    "code",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "code",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "permanentNumber": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "permanentNumber",
+                    "code",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "driverId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "type": "string"
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "driverId",
+                    "url",
+                    "givenName",
+                    "familyName",
+                    "dateOfBirth",
+                    "nationality"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "Drivers"
+          ]
+        }
+      },
+      "required": [
+        "xmlns",
+        "series",
+        "url",
+        "limit",
+        "offset",
+        "total",
+        "DriverTable"
+      ]
+    }
+  },
+  "required": [
+    "MRData"
+  ]
+}

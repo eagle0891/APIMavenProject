@@ -32,7 +32,6 @@ public class PostServiceHelper {
         }
     }
 
-
     public PostServiceHelper(){
         RestAssured.baseURI = BASE_URI;
         RestAssured.useRelaxedHTTPSValidation();

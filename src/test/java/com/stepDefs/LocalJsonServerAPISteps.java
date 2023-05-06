@@ -1,5 +1,6 @@
 package com.stepDefs;
 
+import com.helpers.PostServiceHelper;
 import com.model.PostsPojo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,12 +14,16 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
+import org.apache.http.HttpStatus;
 
+import java.io.IOException;
 import java.util.Arrays;
 
 import static io.restassured.RestAssured.*;
+import static org.junit.Assert.assertEquals;
 
 public class LocalJsonServerAPISteps {
+    private final PostServiceHelper postServiceHelper;
     FakerUtils fakerUtils;
     PostsPojo postPojo;
     TestHelpers testHelpers;
@@ -28,28 +33,29 @@ public class LocalJsonServerAPISteps {
     private static final ObjectMapper MAPPER = new ObjectMapper();
     private static final String BASE_URI = "http://localhost:3000";
 
-    @Given("^I have provided the request spec '(.*)'$")
-    public void provideRequestSpec(String contentType) {
-        if (contentType.isBlank()) {
-            System.out.println("**** Running @Given step ****");
-            request = given().log().all();
-        } else {
-            request = given().log().all().contentType(contentType);
-        }
+    public LocalJsonServerAPISteps(PostServiceHelper postServiceHelper) {
+        this.postServiceHelper = postServiceHelper;
     }
 
-    @When("^I send a request for posts$")
-    public void sendRequest() {
-        System.out.println("**** Running @When step ****");
-        RestAssured.baseURI = BASE_URI;
-        RestAssured.basePath = "/posts";
-        response = request.when().log().all().get(baseURI + basePath);
+    @Given("^I have provided the request spec$")
+    public void postRequestSpec(){
+        request = postServiceHelper.provideRequestSpecRefactored();
     }
 
-    @Then("^I will receive a list of posts$")
-    public void validateTheResponse() {
-        System.out.println("**** Running @Then step ****");
-        jsonResponse = response.then().log().all().statusCode(200);
+    @When("^I send a request to get posts$")
+    public void sendRequestToGetPosts() {
+        response = postServiceHelper.getAllPosts();
+    }
+
+    @Then("^the posts response status will be (.*)$")
+    public void validatePostsResponseStatus(int statusCode){
+        assertEquals(response.getStatusCode(), statusCode);
+    }
+
+    @And("^I will receive a list of posts in the response$")
+    public void validatePostsListIsReturned() throws Exception {
+        String postsList = postServiceHelper.getPostPojoList().toString();
+        System.out.println(postsList);
     }
 
     @When("^I send a request to create a post '(.*)' '(.*)'$")

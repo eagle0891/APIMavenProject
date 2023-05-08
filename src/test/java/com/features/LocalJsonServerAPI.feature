@@ -9,6 +9,6 @@ Feature: Local jsonServer API
   Scenario: Create post
     Given I have provided the request spec
     When I send a request to create a post
-    Then the response will be 201
+    Then the posts response status will be 201
     And the new post is present
     And all posts are returned correctly

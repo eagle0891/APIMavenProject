@@ -14,6 +14,7 @@ import io.restassured.specification.RequestSpecification;
 import static org.junit.Assert.assertEquals;
 
 public class LocalJsonServerAPISteps {
+
     private final PostServiceHelper postServiceHelper;
     RequestSpecification request;
     Response response;
@@ -47,11 +48,6 @@ public class LocalJsonServerAPISteps {
     @When("^I send a request to create a post$")
     public void createPost() {
         response = postServiceHelper.createPost();
-    }
-
-    @Then("^the response will be (.*)$")
-    public void validateResponseStatus(int statusCode) {
-        assertEquals(response.getStatusCode(), statusCode);
     }
 
     @And("^the new post is present$")

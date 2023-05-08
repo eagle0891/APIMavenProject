@@ -9,6 +9,8 @@ public class HelperFunctions {
 
     //gets the last id of the last object in the response body, and adds 1 to it to create a unique id
     public int createUniqueObjectId(String baseUri, String path, String field){
+        System.out.println(baseUri);
+        System.out.println(path);
         response = RestAssured.given().get(baseUri + path);
         JsonPath jsonPath = new JsonPath(response.getBody().asString());
         int size = jsonPath.getList("$").size();

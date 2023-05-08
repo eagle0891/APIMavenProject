@@ -1,37 +1,23 @@
 package com.stepDefs;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.helpers.PostServiceHelper;
 import com.model.PostsPojo;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.stepDefs.APITestHelpers.TestHelpers;
-import com.utils.FakerUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import org.apache.http.HttpStatus;
 
-import java.io.IOException;
-import java.util.Arrays;
-
-import static io.restassured.RestAssured.*;
 import static org.junit.Assert.assertEquals;
 
 public class LocalJsonServerAPISteps {
     private final PostServiceHelper postServiceHelper;
-    FakerUtils fakerUtils;
-    PostsPojo postPojo;
-    TestHelpers testHelpers;
     RequestSpecification request;
     Response response;
     ValidatableResponse jsonResponse;
-    private static final ObjectMapper MAPPER = new ObjectMapper();
-    private static final String BASE_URI = "http://localhost:3000";
 
     public LocalJsonServerAPISteps(PostServiceHelper postServiceHelper) {
         this.postServiceHelper = postServiceHelper;
@@ -39,7 +25,7 @@ public class LocalJsonServerAPISteps {
 
     @Given("^I have provided the request spec$")
     public void postRequestSpec(){
-        request = postServiceHelper.provideRequestSpecRefactored();
+        request = postServiceHelper.provideRequestSpec();
     }
 
     @When("^I send a request to get posts$")
@@ -58,23 +44,14 @@ public class LocalJsonServerAPISteps {
         System.out.println(postsList);
     }
 
-    @When("^I send a request to create a post '(.*)' '(.*)'$")
-    public void createPost(String path, String field) throws JsonProcessingException {
-        postPojo = new PostsPojo();
-        fakerUtils = new FakerUtils();
-        testHelpers = new TestHelpers();
-        postPojo.setId(testHelpers.createUniqueObjectId(BASE_URI, path, field) + 1);
-        postPojo.setTitle(fakerUtils.generateBookName());
-        postPojo.setAuthor(fakerUtils.generateAuthorName());
-        RestAssured.baseURI = BASE_URI;
-        RestAssured.basePath = path;
-        String jsonData = MAPPER.writeValueAsString(postPojo);
-        response = request.body(jsonData).when().log().all().post(baseURI + basePath).andReturn();
+    @When("^I send a request to create a post$")
+    public void createPost() {
+        response = postServiceHelper.createPost();
     }
 
-    @Then("^the response will be '(.*)'$")
-    public void validateResponseStatus(String statusCode) {
-        jsonResponse = response.then().log().all().statusCode(Integer.parseInt(statusCode));
+    @Then("^the response will be (.*)$")
+    public void validateResponseStatus(int statusCode) {
+        assertEquals(response.getStatusCode(), statusCode);
     }
 
     @And("^the new post is present$")
@@ -83,10 +60,9 @@ public class LocalJsonServerAPISteps {
         System.out.println("New post record is: " + postsPojo.toString());
     }
 
-    @And("^all posts are returned correctly '(.*)'$")
-    public void validateAllPostList(String path) {
-        RestAssured.basePath = path;
-        PostsPojo[] allPosts = RestAssured.get(BASE_URI + basePath).as(PostsPojo[].class);
-        System.out.println("New post record is (second method): " + Arrays.toString(allPosts));
+    @And("^all posts are returned correctly$")
+    public void validateAllPostList() {
+        response = postServiceHelper.getAllPosts();
+        System.out.println("New post record is (second method): " + response.asString());
     }
 }

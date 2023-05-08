@@ -27,7 +27,7 @@ public class PostServiceHelper extends ConfigManager{
     HelperFunctions helperFunctions;
     PostsPojo postsPojo;
 
-    public static final String BASE_URI = prop.getProperty("baseUrl");
+    public static final String BASE_URI = "http://localhost:3000"; //prop.getProperty("baseUrl");
 
     public String getBaseUri(){
         RestAssured.baseURI = BASE_URI;
@@ -35,24 +35,13 @@ public class PostServiceHelper extends ConfigManager{
         return BASE_URI;
     }
 
-    public RequestSpecification provideRequestSpecRefactored(){
+    public RequestSpecification provideRequestSpec(){
             return given().log().all().contentType(ContentType.JSON);
     }
 
-//    public Response provideRequestSpec(String contentType) throws Exception {
-//        RestAssured.baseURI = "http://localhost:3000";
-//        if (contentType.length() == 0) {
-//            return given().log().all();
-//        } else if (contentType.equals("application/json")) {
-//            return given().log().all().contentType(ContentType.JSON);
-//        } else {
-//            throw (new Exception("Invalid content type provided"));
-//        }
-//    }
-
     public Response getAllPosts(){
         RestAssured.baseURI = "http://localhost:3000";
-        return provideRequestSpecRefactored().when().log().all().get(baseURI + Endpoints.GET_ALL_POSTS).andReturn();
+        return provideRequestSpec().when().log().all().get(baseURI + Endpoints.GET_ALL_POSTS).andReturn();
     }
 
     public List<PostsPojo> getPostPojoList() throws Exception {
@@ -61,7 +50,6 @@ public class PostServiceHelper extends ConfigManager{
         System.out.println(postList);
         return postList;
     }
-
 
     public Response createPost(){
         fakerUtils = new FakerUtils();
@@ -72,9 +60,11 @@ public class PostServiceHelper extends ConfigManager{
         postsPojo.setTitle(fakerUtils.generateBookName());
         postsPojo.setAuthor(fakerUtils.generateAuthorName());
 
-        Response response = given().log().all().contentType(ContentType.JSON).when().body(postsPojo).post(Endpoints.CREATE_POST).andReturn();
-        assertEquals(String.valueOf(response.getStatusCode()), HttpStatus.SC_CREATED, "Created");
+//        Response response = given().log().all().contentType(ContentType.JSON).when().body(postsPojo).post(Endpoints.CREATE_POST).andReturn();
+//        assertEquals(String.valueOf(response.getStatusCode()), HttpStatus.SC_CREATED, "Created");
 
-        return null;
+        return provideRequestSpec().when().body(postsPojo).post(BASE_URI + Endpoints.CREATE_POST).andReturn();
     }
+
+
 }

@@ -6,12 +6,9 @@ Feature: Local jsonServer API
     Then the posts response status will be 200
     And I will receive a list of posts in the response
 
-  Scenario Outline: Create post
+  Scenario: Create post
     Given I have provided the request spec
-    When I send a request to create a post '<path>' '<field>'
-    Then the response will be '<statusCode>'
+    When I send a request to create a post
+    Then the response will be 201
     And the new post is present
-    And all posts are returned correctly '<path>'
-    Examples:
-      | path   | statusCode | field |
-      | /posts | 201        | id    |
+    And all posts are returned correctly
